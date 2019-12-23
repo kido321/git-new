@@ -1,0 +1,25 @@
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'post/style.css' %}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>users list</title>
+</head>
+<body>
+<ol>
+{% for person in userkey %}
+
+    <li><h3>user info</h3></li>
+        <ul>
+            <li>name = {{person.name}}</li>
+            <li>lastname = {{person.last_name}}</li>
+            <li>email :{{person.email}}</li>
+        </ul>
+
+{%endfor%}
+</ol>
+</body>
+</html>
+

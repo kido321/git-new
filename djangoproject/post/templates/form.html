@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{%extends "base.html"%}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <meta charset="UTF-8">
+    <title>formsss</title>
+</head>
+<body>
+{%block body_block%}
+    <form method="POST">
+        <p>{{formkey2.as_p}}</p>
+        {% csrf_token %}
+        <input type="submit" class="btn btn-primary" value="Submit">
+    </form>
+{%endblock%}
+</body>
+</html>
+

@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+{%extends "base.html"%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>users list</title>
+</head>
+<body>
+{%block body_block%}
+<ul>
+{% for person in userkey %}
+
+    <li><h3>user info</h3></li>
+        <ul>
+            <li>name = {{person.name}}</li>
+            <li>lastname = {{person.last_name}}</li>
+            <li>email :{{person.email}}</li>
+        </ul>
+
+{%endfor%}
+</ul>
+<p>{{userkey}}</p>
+{%endblock%}
+</body>
+</html>
+
