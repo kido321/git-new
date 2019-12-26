@@ -10,6 +10,7 @@ urlpatterns= [
     path('userlist/', views.userss, name="postn"),
     #path('form/', views.Formnameview2),
     path('form2/', views.Fbview),
+    path("cbv/",views.CBV.as_view())
 ]
 
 

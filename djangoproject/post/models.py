@@ -37,7 +37,9 @@ class Fb(models.Model):
         return self.user1.username'''
 
 
-
+class Schools(models.Model):
+    name = models.CharField(max_length=123)
+    location = models.CharField(max_length=123)
 
 
 

@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from .models import Products,user
+from .models import Products,user,Schools
 from .forms import Formmodel
 from . import forms
+from django.views.generic import TemplateView,View,ListView,DetailView
 def index (request):
    # product= Products.objects.all()
     return render(request ,'testt.html')#, {'product': product})
@@ -46,3 +47,10 @@ def Formnameview2(request):
 
 def facebook(request):
     return render(request,"form2.html")
+
+class CBV(TemplateView):
+
+    template_name ="index2.html"
+
+class CBVL(ListView):
+    model = Schools
